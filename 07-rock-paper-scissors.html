@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <p>Rock Paper Scissors</p>
+    <button onclick="play('rock')">Rock</button>
+    <button onclick="play('paper')">Paper</button>
+    <button onclick="play('scissors')">Scissors</button>
+    <script>
+      let computerMove;
+
+      function robotMoveGenerator() {
+        const randomNumber = Math.random();
+        if (randomNumber >= 0 && randomNumber < 1 / 3) {
+          return "rock";
+        } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+          return "paper";
+        } else {
+          return "scissors";
+        }
+      }
+
+      function displayResult(user, result) {
+        console.log("My move: " + user);
+        console.log("Robot move: " + computerMove);
+        console.log(result);
+        alert(`You picked ${user}. Computer picked ${computerMove}. ${result}`);
+      }
+
+      function play(userMove) {
+        computerMove = robotMoveGenerator();
+        let result = "";
+        if (computerMove === userMove) {
+          result = "Tie!";
+          displayResult(userMove, result);
+        } else if (userMove === "rock") {
+          if (computerMove === "paper") {
+            result = "You lose!";
+            displayResult(userMove, result);
+          } else {
+            result = "You win!";
+            displayResult(userMove, result);
+          }
+        } else if (userMove === "paper") {
+          if (computerMove === "rock") {
+            result = "You win!";
+            displayResult(userMove, result);
+          } else {
+            result = "You lose!";
+            displayResult(userMove, result);
+          }
+        } else {
+          if (computerMove === "paper") {
+            result = "You win!";
+            displayResult(userMove, result);
+          } else {
+            result = "You lose!";
+            displayResult(userMove, result);
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document Object Notation</title>
+  </head>
+  <body>
+    <button>First Button</button>
+    <button class="js-button">Second Button</button>
+    <script>
+      // document.body.innerHTML = "hello";
+      // changing the title
+      // in built document object
+      document.title = "Good Job";
+      console.log(document.title);
+
+      console.log(document.body);
+      console.log(typeof document.body); // object
+      // controls HTML inside the body
+      console.log(document.body.innerHTML);
+      // changing innner HTML
+      // document.body.innerHTML = "hello";
+
+      // document.body.innerHTML = "<button>Good Job</button>";
+
+      // gets the first element
+      console.log(document.querySelector("button"));
+      console.log(document.querySelector("button").innerHTML);
+      document.querySelector("button").innerHTML = "Changed";
+
+      // selecting other elements using class
+      // name the class starting with 'js-'
+      // it denotes that it is used in js
+      document.querySelector(".js-button").innerHTML = "Second";
+
+      // store it inside a variable as object
+      const buttonElement = document.querySelector(".js-button");
+      console.log(buttonElement);
+      console.log("type of buttonElement: " + typeof buttonElement);
+    </script>
+  </body>
+</html>

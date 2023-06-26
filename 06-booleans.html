@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booleans</title>
+  </head>
+  <body>
+    <script>
+      console.log(3 > 5);
+      console.log(typeof true);
+      console.log(typeof false);
+
+      console.log(5 == "5.00"); // check with conversion
+      console.log(5 === "5"); // check without conversion
+
+      //if statement
+      if (true) {
+        console.log("hello");
+      } else {
+        console.log("hey");
+      }
+
+      let age = 30;
+      if (age >= 18) {
+        console.log("You can drive");
+      } else if (age >= 14) {
+        console.log("Almost old enough to drive");
+      } else {
+        console.log("You are too young to drive");
+      }
+
+      // truthy and falsy value
+      // 0, false, '', NaN, underfined, null => falsy
+      // remaining all => truthy
+      if (5) {
+        console.log("truthy");
+      }
+
+      //ternary operator
+      let result = true ? "truthy" : "falsy";
+      console.log(result);
+
+      // && short-circuit evaluation
+      if (false && 5 > 3) {
+        console.log("short-circuiting");
+      }
+
+      // || short-circuit evaluation
+      if (true || 5 < 3) {
+        console.log("short-circuiting");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects</title>
+  </head>
+  <body>
+    <script>
+      const product = {
+        name: "socks", //property-value pair
+        price: 1090,
+        rating: {
+          star: 4.5,
+          count: 87,
+        },
+        fun: function display() {
+          console.log("Function inside object");
+        },
+      };
+
+      console.log(product);
+      console.log("Name: " + product.name); // Dot notation
+      console.log("Price: " + product.price);
+
+      product.name = "cotton socks";
+      console.log(product);
+
+      // Creating new property
+      product.size = "XS";
+      console.log(product);
+
+      // Deleting Property
+      delete product.size;
+      console.log(product);
+
+      console.log(product["name"]);
+      console.log(product["color"]); // no such property
+
+      console.log(product.rating.star);
+      product.fun();
+
+      //Javascript Object to JSON
+      console.log("JS Object to JSON");
+      console.log(JSON.stringify(product));
+
+      //JSON to Javascript Object
+      console.log("JSON to JS Object");
+      const jsonString = JSON.stringify(product);
+      console.log(JSON.parse(jsonString)); // it is of type string
+
+      //auto-boxing
+      console.log("hello".length);
+      console.log("hello".toUpperCase());
+
+      // objects are all references
+      const sampleObject = {
+        message: "hello",
+      };
+
+      const newObject = sampleObject; // copy by reference
+
+      // changes for both objects as they are references
+      sampleObject.message = "Good Job!";
+      const object3 = { message: "Good Job!", price: 799 };
+      console.log(newObject);
+      console.log(sampleObject === newObject);
+      console.log(sampleObject === object3);
+
+      //destructuring
+      const { message, price } = object3;
+      console.log(message);
+
+      const object5 = {
+        // message: message
+        message, // short-hand property
+        // method: function function1() {
+        //   console.log("method");
+        // },
+        // short-hand method syntax
+        method() {
+          console.log("method");
+        },
+      };
+      console.log(object5);
+      object5.method();
+    </script>
+  </body>
+</html>

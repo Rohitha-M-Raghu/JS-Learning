@@ -1,0 +1,55 @@
+'hello'
+"hello"
+alert('hello');
+undefined
+'some' + 'text'
+"sometext"
+'some' + ' more ' + 'text'
+"some more text"
+//concatenation
+undefined
+typeof 2
+"number"
+typeof 'hello'
+"string"
+typeof 'hello' + 3
+"string3"
+'hello' + 3 //type coersion
+"hello3"
+'$28.94'
+"$28.94"
+'$' + 20.95 + 7.99 // only concatenates
+"$20.957.99"
+'$' + (20.95 + 7.99)
+"$28.939999999999998"
+'$' + ((2095 + 799) / 100)
+"$28.94"
+'Items (' + (1 + 1) + '): $' + ((2095 + 799) / 100)
+"Items (2): $28.94"
+alert('Items (' + (1 + 1) + '): $' + ((2095 + 799) / 100));
+undefined
+'hello'
+"hello"
+"hello"
+"hello"
+`I'm learning "Javascript"`
+`I'm learning "Javascript"`
+'I\'m learning \"Javascript\"'
+`I'm learning "Javascript"`
+'Name: \t Rohitha'
+"Name: 	 Rohitha"
+//interpolation is better than concatenation - use batics
+undefined
+`Items (${1 + 1}): \t $ ${((2095 + 799) / 100)}`
+"Items (2): 	 $ 28.94"
+// hence interpolation is cleaner
+undefined
+`some
+text`
+"some
+text"
+`Totoal cost: $8.94\nThank you, come again!`
+"Totoal cost: $8.94
+Thank you, come again!"
+alert(`Totoal cost: $8.94\nThank you, come again!`);
+undefined

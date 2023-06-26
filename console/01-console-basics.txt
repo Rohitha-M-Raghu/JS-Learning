@@ -1,0 +1,28 @@
+alert('Hello');
+undefined
+alert('Good Job');
+undefined
+2 + 2
+4
+10 - 3
+7
+document.body.innerHTML = 'hello';
+"hello"
+alert('Good Morning!');
+undefined
+alert('Rohitha M Raghu');
+undefined
+10 + 5
+15
+20 - 5
+15
+2 + 2 - 5
+-1
+document.body.innerHTML = 'Good Morning';
+"Good Morning"
+document.body.innerHTML = 'Rohitha M Raghu';
+"Rohitha M Raghu"
+10 + 8 + 20
+38
+document.body.innerHTML = '';
+""
