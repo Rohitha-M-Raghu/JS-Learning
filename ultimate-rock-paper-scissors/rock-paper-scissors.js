@@ -100,7 +100,7 @@ let intervalId;
 
 function autoPlay() {
   if(!isAutoPlaying) {
-    intervalId = setInterval(function() {
+    intervalId = setInterval(() => {
       const playerMove = robotMoveGenerator();
       play(playerMove);
     }, 1000);
