@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays</title>
+  </head>
+  <body>
+    <script>
+      // Array is a reference
+      const array1 = [1, 2, 3];
+      const array2 = array1;
+
+      array2.push(2);
+      console.log(array1);
+      console.log(array2);
+
+      // Destructuring
+      const [firstValue, secondValue] = [1, 2, 3];
+
+      for (let i = 0; i <= 10; ++i) {
+        if (i % 3 === 0) {
+          continue;
+        }
+        console.log(i);
+        if (i === 8) {
+          break;
+        }
+      }
+
+      let i = 1;
+      while (i <= 10) {
+        if (i % 3 === 0) {
+          ++i;
+          continue; // do increment step manually
+        }
+        console.log(i);
+        i++;
+      }
+    </script>
+  </body>
+</html>
