@@ -1,4 +1,8 @@
-const todoList = [];
+// retrieve from local storage
+// const todoList = [];
+let todoList = JSON.parse(localStorage.getItem("todoList")) || [];
+
+renderTodoList();
 
 function addTodo() {
   const inputElement = document.querySelector('.js-name-input');
@@ -8,6 +12,8 @@ function addTodo() {
   const dueDate = dateInputElement.value;
   
   todoList.push({name, dueDate});
+
+  localStorage.setItem("todoList", JSON.stringify(todoList));
 
   // to clear the input box
   inputElement.value = ''; 
@@ -32,6 +38,8 @@ function renderTodoList() {
       `;
 
     todoListHTML += html;
+    localStorage.setItem("todoList", JSON.stringify(todoList));
+
   }
 
   document.querySelector('.js-todo-list').innerHTML = todoListHTML;
