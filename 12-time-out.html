@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time Out</title>
+  </head>
+  <body>
+    <script>
+      // asynchronous
+      setTimeout(function () {
+        console.log("Timeout...");
+      }, 3000);
+      // doesn't wait for completing the execution and moves to next line
+      console.log("next line");
+
+      setInterval(function () {
+        console.log("Internval");
+      }, 3000);
+
+      for (let i = 0; i < 10; ++i) {
+        console.log("Running");
+      }
+    </script>
+  </body>
+</html>

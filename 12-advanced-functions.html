@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Functions</title>
+  </head>
+  <body>
+    <script>
+      // functions are values
+      function greeting() {
+        console.log("hello");
+      }
+
+      greeting();
+
+      const num = 2;
+      const function1 = function greeting() {
+        // type = function
+        console.log("Function Saved in Variable");
+      };
+
+      console.log(function1);
+      console.log(typeof function1);
+
+      function1();
+
+      const function2 = function () {
+        console.log("Anonymous function");
+      };
+
+      const object1 = {
+        num: 2,
+        fun: function () {
+          console.log("Good Morning!");
+        },
+      };
+
+      object1.fun();
+
+      // paasing a function into another function
+      function display(data) {
+        console.log(data);
+      }
+      display(2);
+
+      function run(param) {
+        param();
+      }
+
+      run(function () {
+        console.log("hello guys...");
+      });
+    </script>
+  </body>
+</html>
