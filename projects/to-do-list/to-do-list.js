@@ -11,7 +11,7 @@ document.querySelector('.js-add-todo-button')
 
 function addTodo() {
   const inputElement = document.querySelector('.js-name-input');
-  const name = inputElement.value;
+  const name = inputElement.value || 'NoName Task';
 
   const dateInputElement = document.querySelector('.js-due-date-input');
   const dueDate = dateInputElement.value || 'No DueDate';
